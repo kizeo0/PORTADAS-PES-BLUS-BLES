@@ -2,247 +2,234 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Iconos y Portadas PKG · PS3 PES</title>
+    <title>Portadas PKG · PS3 PES</title>
     <style>
-        /* Estilos compatibles con navegador PS3 (NetFront) */
+        /* Estilos optimizados para PS3 (NetFront) */
         body {
-            background-color: #0d0d0d;
-            color: #e0e0e0;
+            background: #0a0a0a;
+            color: #f0f0f0;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
-            margin: 20px;
+            font-size: 16px;
+            margin: 10px;
             padding: 0;
             text-align: center;
         }
-        a {
-            color: #88ddff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            color: #aaffcc;
-            text-decoration: underline;
-        }
         h1 {
-            color: #aaffcc;
-            font-size: 24px;
-            margin-bottom: 6px;
+            color: #ffcc44;
+            font-size: 32px;
+            text-shadow: 2px 2px 4px #000;
+            margin: 10px 0 4px 0;
         }
         h2 {
-            color: #cccccc;
-            font-size: 18px;
+            color: #aaddff;
+            font-size: 20px;
             font-weight: normal;
-            margin-top: 0;
-            margin-bottom: 20px;
+            margin: 0 0 15px 0;
         }
         .note {
-            color: #ffaa66;
-            font-size: 13px;
-            margin: 10px 0 25px 0;
-            padding: 8px;
-            background-color: #1a1a1a;
-            border: 1px solid #333;
+            background: #1a1a1a;
+            border: 2px solid #ff9933;
+            padding: 10px 15px;
+            margin: 10px auto 25px auto;
             display: inline-block;
-        }
-        table {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            border-collapse: collapse;
-            background-color: #141414;
-            border: 1px solid #2a2a2a;
-        }
-        th {
-            background-color: #1f1f1f;
-            color: #aaffcc;
+            color: #ffaa66;
             font-size: 16px;
-            padding: 10px 5px;
-            border-bottom: 2px solid #3a3a3a;
-            text-align: center;
+            font-weight: bold;
         }
-        td {
-            padding: 10px 5px;
+        /* Cada portada es una tabla independiente */
+        .portada {
+            width: 95%;
+            max-width: 700px;
+            margin: 20px auto;
+            background: #141414;
+            border: 3px solid #2a2a2a;
+            border-collapse: collapse;
+        }
+        .portada th {
+            background: #1f2a2a;
+            color: #ffffff;
+            font-size: 26px;
+            padding: 15px 5px;
+            border-bottom: 3px solid #3a5a5a;
+            letter-spacing: 2px;
+        }
+        .portada td {
+            padding: 10px 10px;
             border-bottom: 1px solid #2a2a2a;
-            vertical-align: middle;
             text-align: center;
+            vertical-align: middle;
+        }
+        .preview-cell {
+            background: #0d0d0d;
+            padding: 5px;
         }
         .preview-img {
-            max-width: 200px;
+            width: 100%;
+            max-width: 650px;
             height: auto;
-            border: 1px solid #333;
+            border: 2px solid #333;
+            display: block;
+            margin: 0 auto;
         }
-        .title-row {
-            font-size: 18px;
+        .links-cell {
+            background: #181818;
+            padding: 18px 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 16px 30px;
+            margin: 0 15px;
+            font-size: 24px;
             font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px; /* algunos navegadores lo ignoran, pero no importa */
+            border: 2px solid #ffffff;
             color: #ffffff;
-            background-color: #1a1a1a;
+            background: #1a3a5a;
+            min-width: 120px;
         }
-        .links a {
-            margin: 0 12px;
-            padding: 4px 12px;
-            background-color: #1f2a2a;
-            border-radius: 4px;
-            border: 1px solid #3a4a4a;
-            color: #aaffcc;
-            font-size: 14px;
+        .btn-blus {
+            background: #0055aa;
+            border-color: #66ccff;
+            color: #ffffff;
         }
-        .links a:hover {
-            background-color: #2a3a3a;
-            border-color: #88ddff;
+        .btn-bles {
+            background: #1a7a3a;
+            border-color: #66ff88;
+            color: #ffffff;
         }
-        .spacer {
-            height: 10px;
+        .btn:hover {
+            opacity: 0.85;
+            text-decoration: underline;
         }
         .footer {
-            margin-top: 30px;
-            font-size: 12px;
+            margin: 30px 0 15px 0;
+            font-size: 14px;
             color: #666;
+            border-top: 1px solid #222;
+            padding-top: 15px;
         }
-        /* para versiones antiguas, sin tablas anidadas complejas */
-        .separator {
-            clear: both;
+        /* Ajuste para pantallas pequeñas (PS3) */
+        @media screen and (max-width: 480px) {
+            .btn {
+                font-size: 20px;
+                padding: 14px 20px;
+                margin: 0 8px;
+                min-width: 80px;
+            }
+            .portada th {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>🎮 ICONOS Y PORTADAS PKG · PS3</h1>
-    <h2>BLUS <span style="color:#aaffcc;">NPUB31612</span> &nbsp;|&nbsp; BLES <span style="color:#aaffcc;">NPEB02252</span></h2>
+    <h1>⚽ PORTADAS PKG · PS3</h1>
+    <h2>BLUS <span style="color:#88ddff;">NPUB31612</span> &nbsp;|&nbsp; BLES <span style="color:#88ff88;">NPEB02252</span></h2>
 
     <div class="note">
-        ⚠️ Para que el cambio de nombre haga efecto, se debe realizar una <strong>reconstrucción de la base de datos</strong>.
+        ⚠️ Reconstrucción de base de datos necesaria tras instalar
     </div>
 
-    <!-- ===== MUNDIAL V1 ===== -->
-    <table>
-        <tr><th colspan="3">🌍 MUNDIAL V1</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGjLIpL6gM-Sltv6kJQOpycF-cRU3bb3fDXn0otRfm9PJkkFqmsJsBXCix4iHYSBDj9e0SjMyClz6sODucwMcR14D6xmv48WjPVTLklbPOsPY0BQuJUijIsQ_7sjgZ0U_gKLxfjOFRXVvmgVHJ3dVOTs6idPZCPXjWFb415EcRXrgEq8DiYrjBMhFLKJSv/s320/Mundial_2026_v1_preview.jpg" alt="Mundial V1 preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/fqdt4a6f0wd2ubr/Mundial_2026_v1_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/xczuxkwohz7w2e3/Mundial_2026_v1_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== MUNDIAL V1 ========== -->
+    <table class="portada">
+        <tr><th>🌍 MUNDIAL V1</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGjLIpL6gM-Sltv6kJQOpycF-cRU3bb3fDXn0otRfm9PJkkFqmsJsBXCix4iHYSBDj9e0SjMyClz6sODucwMcR14D6xmv48WjPVTLklbPOsPY0BQuJUijIsQ_7sjgZ0U_gKLxfjOFRXVvmgVHJ3dVOTs6idPZCPXjWFb415EcRXrgEq8DiYrjBMhFLKJSv/s1920/Mundial_2026_v1_preview.jpg" alt="Mundial V1" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/fqdt4a6f0wd2ubr/Mundial_2026_v1_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/xczuxkwohz7w2e3/Mundial_2026_v1_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
-    <!-- ===== MUNDIAL V2 ===== -->
-    <table>
-        <tr><th colspan="3">🌍 MUNDIAL V2</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8bmfFn-mnMEyNsfpv-AHb-0YNH2Y6BNHjIlO3uMky6ARVXeXONTmtpeAUWg0WbYfGnM6rDd16KQD7OwziRvnaM1A6JjYASPF9IYVegL5GFsE0QnRIFkRqM0rf-lSFdhcdQm-1se12ppelleCjF3cvZf1hHBvr5IoTUg5eqMBPUMpDRFEf5pM5P3NLu6yI/s320/Mundial_2026_v2_preview.jpg" alt="Mundial V2 preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/t58ycqo123o2kz9/Mundial_2026_v2_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/z429s67d65rz08l/Mundial_2026_v2_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== MUNDIAL V2 ========== -->
+    <table class="portada">
+        <tr><th>🌍 MUNDIAL V2</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8bmfFn-mnMEyNsfpv-AHb-0YNH2Y6BNHjIlO3uMky6ARVXeXONTmtpeAUWg0WbYfGnM6rDd16KQD7OwziRvnaM1A6JjYASPF9IYVegL5GFsE0QnRIFkRqM0rf-lSFdhcdQm-1se12ppelleCjF3cvZf1hHBvr5IoTUg5eqMBPUMpDRFEf5pM5P3NLu6yI/s1920/Mundial_2026_v2_preview.jpg" alt="Mundial V2" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/t58ycqo123o2kz9/Mundial_2026_v2_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/z429s67d65rz08l/Mundial_2026_v2_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
-    <!-- ===== MUNDIAL V3 ===== -->
-    <table>
-        <tr><th colspan="3">🌍 MUNDIAL V3</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-Bqo7DMLXJ_EOzHz30j_HljgaWA9Kkjyj8S09MFbY9NtRrywgBlUkEKkYGFP3qkPJptuqd9l1yNhNd4j5Yn3QNSH64ZzSwg0B85rckqwi9sKAjnSGS1sBbQUkQq_WOKzPvxwdGiNxqYY9Bo8kiiBz3Xg6_uj2iVBdY1E4JB7oE5_mexGA-3AZZNdKdRzW/s320/Mundial_2026_v3_preview.jpg" alt="Mundial V3 preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/ik4smbig4k6dlpe/Mundial_2026_v3_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/mzag0zt4rei8bgb/Mundial_2026_v3_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== MUNDIAL V3 ========== -->
+    <table class="portada">
+        <tr><th>🌍 MUNDIAL V3</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-Bqo7DMLXJ_EOzHz30j_HljgaWA9Kkjyj8S09MFbY9NtRrywgBlUkEKkYGFP3qkPJptuqd9l1yNhNd4j5Yn3QNSH64ZzSwg0B85rckqwi9sKAjnSGS1sBbQUkQq_WOKzPvxwdGiNxqYY9Bo8kiiBz3Xg6_uj2iVBdY1E4JB7oE5_mexGA-3AZZNdKdRzW/s1920/Mundial_2026_v3_preview.jpg" alt="Mundial V3" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/ik4smbig4k6dlpe/Mundial_2026_v3_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/mzag0zt4rei8bgb/Mundial_2026_v3_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
-    <!-- ===== MUNDIAL V4 ===== -->
-    <table>
-        <tr><th colspan="3">🌍 MUNDIAL V4</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUUXM0h4BCmtWILSU50CByJ0YXUDdTj22jSz-zTV0FSYEBwap_pa-E9Zzhw8xKzm010EYkKfek11hCUDYHU8xq-UqD7SGI6P2BljMARIi6aeO5VMFlsdPZ8yMJS4O3lj41miKh6UuGASMfiR0UDiaFLxPQidh2LPsYFU1xpj9E3qgFc7Xpsrj3qYl-Gc_x/s320/Mundial_2026_v4_preview.jpg" alt="Mundial V4 preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/yod2pf6mjj3r8aw/Mundial_2026_v4_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/dt8dpmqhkka4c9a/Mundial_2026_v4_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== MUNDIAL V4 ========== -->
+    <table class="portada">
+        <tr><th>🌍 MUNDIAL V4</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUUXM0h4BCmtWILSU50CByJ0YXUDdTj22jSz-zTV0FSYEBwap_pa-E9Zzhw8xKzm010EYkKfek11hCUDYHU8xq-UqD7SGI6P2BljMARIi6aeO5VMFlsdPZ8yMJS4O3lj41miKh6UuGASMfiR0UDiaFLxPQidh2LPsYFU1xpj9E3qgFc7Xpsrj3qYl-Gc_x/s1920/Mundial_2026_v4_preview.jpg" alt="Mundial V4" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/yod2pf6mjj3r8aw/Mundial_2026_v4_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/dt8dpmqhkka4c9a/Mundial_2026_v4_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
-    <!-- ===== MUNDIAL V5 ===== -->
-    <table>
-        <tr><th colspan="3">🌍 MUNDIAL V5</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGH394UyKj3XmRTskoJ_uXM4W8laD5mdaK6fWzDRGcMpV9OgaEVFob26LU29fAyZOUBjq7MU99cIWncDAmZVHptAQEdwOG1fsOJ7raH9r7bXCoBM-OPmkYU98VddthaSQqWLD-sJGVCqKHMscGLuvr7Dqkf5xA2dcSNA_og2s6eletNbZfxjOukr9SKEXs/s320/Mundial_2026_v5_preview.jpg" alt="Mundial V5 preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/hzby1ik2za3vnje/Mundial_2026_v5_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/7hr7r886qaetl60/Mundial_2026_v5_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== MUNDIAL V5 ========== -->
+    <table class="portada">
+        <tr><th>🌍 MUNDIAL V5</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGH394UyKj3XmRTskoJ_uXM4W8laD5mdaK6fWzDRGcMpV9OgaEVFob26LU29fAyZOUBjq7MU99cIWncDAmZVHptAQEdwOG1fsOJ7raH9r7bXCoBM-OPmkYU98VddthaSQqWLD-sJGVCqKHMscGLuvr7Dqkf5xA2dcSNA_og2s6eletNbZfxjOukr9SKEXs/s1920/Mundial_2026_v5_preview.jpg" alt="Mundial V5" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/hzby1ik2za3vnje/Mundial_2026_v5_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/7hr7r886qaetl60/Mundial_2026_v5_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
-    <!-- ===== FRANCIA ===== -->
-    <table>
-        <tr><th colspan="3">🇫🇷 FRANCIA</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgas8h74lqe0H1Rxx28sfHotRqEfxIaacSjka_Ntj6l5SmVmCIi5idxVwvEuNJam22Twj2zq4XXjiIZAaEHDVeQRVmDn0iV7U6arFcDsOoiduCGvVj-io1z_TrmTAe91VKlHYrHRIWbj78hB35RgQj1lEqTqBPuqxb5muYYQgr5agThdKog8oGTliQ5tSWN/s320/francia_portada_preview.jpg" alt="Francia preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/qcljpg8yganisky/francia_portada_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/b2a06ls1ysiayaw/francia_portada_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== FRANCIA ========== -->
+    <table class="portada">
+        <tr><th>🇫🇷 FRANCIA</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgas8h74lqe0H1Rxx28sfHotRqEfxIaacSjka_Ntj6l5SmVmCIi5idxVwvEuNJam22Twj2zq4XXjiIZAaEHDVeQRVmDn0iV7U6arFcDsOoiduCGvVj-io1z_TrmTAe91VKlHYrHRIWbj78hB35RgQj1lEqTqBPuqxb5muYYQgr5agThdKog8oGTliQ5tSWN/s1920/francia_portada_preview.jpg" alt="Francia" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/qcljpg8yganisky/francia_portada_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/b2a06ls1ysiayaw/francia_portada_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
-    <!-- ===== VINICIUS JUNIOR ===== -->
-    <table>
-        <tr><th colspan="3">⚡ VINICIUS JUNIOR</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZrRlT3JlmbM41c3i2R9N08fQVqNev6I6HGzuY_5LoLDg1bT0PKkYyPr5-h7o0RCPXKmiGbEbxUDTxrhFPEIg-d3e7mrdJtXI1eG55OJtRcAsgiSbIJy7hSRXO0Kl34mUaNFXp3FOZpInQ35WoWp4o5T_qR8oVqjuQiEuJwD7ssODmMbA9fJyYglJNq9kf/s320/vini_portada_preview.jpg" alt="Vinicius preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/8yvtmms43rhbwqy/vini_portada_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/fs01d4sy33lq24i/vini_portada_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== VINICIUS JUNIOR ========== -->
+    <table class="portada">
+        <tr><th>⚡ VINICIUS JR</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZrRlT3JlmbM41c3i2R9N08fQVqNev6I6HGzuY_5LoLDg1bT0PKkYyPr5-h7o0RCPXKmiGbEbxUDTxrhFPEIg-d3e7mrdJtXI1eG55OJtRcAsgiSbIJy7hSRXO0Kl34mUaNFXp3FOZpInQ35WoWp4o5T_qR8oVqjuQiEuJwD7ssODmMbA9fJyYglJNq9kf/s1920/vini_portada_preview.jpg" alt="Vinicius" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/8yvtmms43rhbwqy/vini_portada_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/fs01d4sy33lq24i/vini_portada_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
-    <!-- ===== LAMINE YAMAL ===== -->
-    <table>
-        <tr><th colspan="3">🌟 LAMINE YAMAL</th></tr>
-        <tr>
-            <td colspan="3">
-                <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7ISYyjZ0uX7PE3lCLPGAlKLhMJ5gGHjDSEwg4PeKIqa6GFpWjIC2p3WC_G0xByCDUzPnK5F5naQny89jsYu2waih8v743vIHIBzICD8TcpGTVPWEohwlpSWN3VgLZfIRc1EKCM8lVWjhpvj8zKegoo-S5Xi0GwHM9qKogi5HcwIqRG5QAIfrxdwh25aRz/s320/yamal_portada_preview.jpg" alt="Yamal preview" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="links">
-                <a href="https://www.mediafire.com/file/7j18aalrzibs3vd/yamal_portada_BLUS.pkg/file">🔵 BLUS</a>
-                <a href="https://www.mediafire.com/file/2lsuezbl9kd6oe8/yamal_portada_BLES.pkg/file">🟢 BLES</a>
-            </td>
-        </tr>
+    <!-- ========== LAMINE YAMAL ========== -->
+    <table class="portada">
+        <tr><th>🌟 LAMINE YAMAL</th></tr>
+        <tr><td class="preview-cell">
+            <img class="preview-img" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7ISYyjZ0uX7PE3lCLPGAlKLhMJ5gGHjDSEwg4PeKIqa6GFpWjIC2p3WC_G0xByCDUzPnK5F5naQny89jsYu2waih8v743vIHIBzICD8TcpGTVPWEohwlpSWN3VgLZfIRc1EKCM8lVWjhpvj8zKegoo-S5Xi0GwHM9qKogi5HcwIqRG5QAIfrxdwh25aRz/s1920/yamal_portada_preview.jpg" alt="Yamal" />
+        </td></tr>
+        <tr><td class="links-cell">
+            <a href="https://www.mediafire.com/file/7j18aalrzibs3vd/yamal_portada_BLUS.pkg/file" class="btn btn-blus">🔵 BLUS</a>
+            <a href="https://www.mediafire.com/file/2lsuezbl9kd6oe8/yamal_portada_BLES.pkg/file" class="btn btn-bles">🟢 BLES</a>
+        </td></tr>
     </table>
 
     <div class="footer">
-        Portadas personalizadas para PES · PS3 · Instalación vía PKG<br>
+        Portadas personalizadas para PES · PlayStation 3 · Instalación vía PKG<br>
         <span style="color:#555;">Todos los enlaces son de MediaFire</span>
     </div>
 
