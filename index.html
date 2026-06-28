@@ -2,90 +2,347 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>ICONOS Y PORTADAS PKG PARA PS3 - BY KIZEO</title>
+    <title>PORTADAS PKG · PS3 · KIZEO</title>
     <style>
+        /* === ESTILOS COMPATIBLES CON PS3 === */
         body {
-            background-color: #0d1117; 
-            background-image: url('fokurou.png');
-            background-repeat: repeat;
+            background-color: #0a0e14;
             color: #e6edf3;
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 15px 5px;
+            margin: 10px 5px;
+            padding: 0;
             text-align: center;
         }
-        
-        .header-container {
-            width: 94%;
+
+        /* CABECERA */
+        .header {
             max-width: 1100px;
-            margin: 0 auto 25px auto;
-            padding: 25px 15px;
-            background-color: rgba(22, 27, 34, 0.94); 
+            margin: 0 auto 20px auto;
+            padding: 20px 15px 15px 15px;
+            background-color: #161b22;
             border: 2px solid #30363d;
-            border-radius: 14px;
+            border-radius: 16px;
+        }
+        h1 {
+            font-size: 32px;
+            margin: 0 0 8px 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .author {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 5px 0 20px 0;
+        }
+        .author a {
+            color: #ffea00;
+            text-decoration: none;
+            border-bottom: 3px solid #ffea00;
+            padding-bottom: 3px;
+        }
+        .author a:hover {
+            color: #ffffff;
+            border-color: #ffffff;
         }
 
-        h1 { font-size: 30px; margin: 0 0 10px 0; color: #ffffff; text-transform: uppercase; letter-spacing: 2px; }
+        /* TABLA DE IDs (BLUS / BLES) */
+        .id-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 15px auto;
+            border-collapse: separate;
+            border-spacing: 15px 0;
+        }
+        .id-cell {
+            width: 50%;
+            padding: 18px 10px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .id-blus { background-color: #0f2347; border: 3px solid #388bfd; }
+        .id-bles { background-color: #12331b; border: 3px solid #2ea043; }
+        .id-label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .id-blus .id-label { color: #58a6ff; }
+        .id-bles .id-label { color: #3fb950; }
+        .id-code {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+        }
 
-        .author-box { font-size: 26px; font-weight: bold; margin-bottom: 25px; color: #ffffff; }
-        .author-link { color: #ffea00; text-decoration: none; border-bottom: 2px solid #ffea00; }
+        /* AVISO */
+        .alert {
+            background-color: #271d0c;
+            border: 2px solid #d29922;
+            color: #f0883e;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 16px;
+            max-width: 820px;
+            margin: 10px auto 0 auto;
+        }
+        .alert strong { color: #ffb347; }
 
-        .table-id { width: 100%; max-width: 900px; margin: 0 auto 20px auto; border-collapse: separate; border-spacing: 15px 0; }
-        .id-cell { width: 50%; padding: 15px 10px; border-radius: 10px; text-align: center; }
-        .bg-blus { background-color: #0f2347; border: 3px solid #388bfd; }
-        .bg-bles { background-color: #12331b; border: 3px solid #2ea043; }
-        .id-region { display: block; font-size: 20px; font-weight: bold; margin-bottom: 5px; }
-        .bg-blus .id-region { color: #58a6ff; }
-        .bg-bles .id-region { color: #3fb950; }
-        .id-code { font-size: 34px; font-weight: bold; color: #ffffff; font-family: 'Courier New', Courier, monospace; letter-spacing: 2px; }
+        /* === GRILLA PRINCIPAL (2 COLUMNAS CON TABLAS) === */
+        .grid {
+            width: 98%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 18px; /* separación entre tarjetas */
+        }
 
-        .master-grid { width: 96%; max-width: 1140px; margin: 0 auto; border-collapse: separate; border-spacing: 16px; }
-        .card-cell { width: 50%; vertical-align: top; background-color: rgba(22, 27, 34, 0.94); border: 2px solid #30363d; border-radius: 14px; padding: 20px 15px; text-align: center; }
-        .card-title { font-size: 22px; font-weight: bold; color: #f0f6fc; margin: 0 0 15px 0; padding-bottom: 10px; border-bottom: 2px solid #21262d; }
-        
-        .preview-box { background-color: #090c10; padding: 6px; border-radius: 8px; border: 2px solid #21262d; margin-bottom: 18px; }
-        .preview-box img { width: 100%; height: auto; border-radius: 6px; display: block; }
+        .card {
+            width: 50%;
+            vertical-align: top;
+            background-color: #161b22;
+            border: 2px solid #30363d;
+            border-radius: 18px;
+            padding: 20px 15px;
+            text-align: center;
+        }
 
-        .table-buttons { width: 100%; border-collapse: separate; border-spacing: 8px 0; }
-        .btn { display: block; padding: 15px 5px; font-size: 18px; font-weight: bold; text-align: center; text-decoration: none; border-radius: 8px; }
-        .btn-blus { background-color: #1f6feb; border: 2px solid #58a6ff; color: #fff; }
-        .btn-bles { background-color: #238636; border: 2px solid #3fb950; color: #fff; }
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f0f6fc;
+            margin: 0 0 12px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #21262d;
+        }
+
+        .preview {
+            background-color: #090c10;
+            padding: 6px;
+            border-radius: 10px;
+            border: 2px solid #21262d;
+            margin-bottom: 18px;
+        }
+        .preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* BOTONES EN FILA */
+        .btn-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px 0;
+        }
+        .btn {
+            display: block;
+            padding: 18px 5px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 2px solid transparent;
+        }
+        .btn-blus {
+            background-color: #1f6feb;
+            color: #ffffff;
+            border-color: #58a6ff;
+        }
+        .btn-bles {
+            background-color: #238636;
+            color: #ffffff;
+            border-color: #3fb950;
+        }
+        .btn:hover {
+            opacity: 0.85;
+            text-decoration: underline;
+        }
+
+        /* PIE DE PÁGINA */
+        .footer {
+            margin: 35px auto 15px auto;
+            max-width: 900px;
+            padding: 18px;
+            font-size: 15px;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            background-color: #0d1117;
+        }
     </style>
 </head>
 <body>
 
-    <div class="header-container">
-        <h1>ICONOS Y PORTADAS PKG PARA PS3</h1>
-        <div class="author-box">BY <a class="author-link" href="https://www.youtube.com/channel/UC68BJa6n5j3BhxsdxFlGqFQ" target="_blank">KIZEO</a></div>
-        
-        <table class="table-id">
+    <!-- ===== CABECERA ===== -->
+    <div class="header">
+        <h1>⚽ PORTADAS PKG · PS3</h1>
+        <div class="author">
+            BY <a href="https://www.youtube.com/channel/UC68BJa6n5j3BhxsdxFlGqFQ" target="_blank">KIZEO</a>
+        </div>
+
+        <table class="id-table">
             <tr>
-                <td class="id-cell bg-blus"><span class="id-region">BLUS</span><span class="id-code">NPUB31612</span></td>
-                <td class="id-cell bg-bles"><span class="id-region">BLES</span><span class="id-code">NPEB02252</span></td>
+                <td class="id-cell id-blus">
+                    <span class="id-label">BLUS (América)</span>
+                    <span class="id-code">NPUB31612</span>
+                </td>
+                <td class="id-cell id-bles">
+                    <span class="id-label">BLES (Europa)</span>
+                    <span class="id-code">NPEB02252</span>
+                </td>
             </tr>
         </table>
+
+        <div class="alert">
+            ⚠️ <strong>Importante:</strong> Para aplicar el nuevo nombre e icono en el XMB, debes realizar una <strong>reconstrucción de base de datos</strong>.
+        </div>
     </div>
 
-    <table class="master-grid">
-        <!-- Generador de tarjetas usando tus archivos de GitHub -->
+    <!-- ===== GRILLA DE PORTADAS ===== -->
+    <table class="grid">
+
+        <!-- FILA 1: V1 + V2 -->
         <tr>
-            <td class="card-cell">
-                <div class="card-title">MUNDIAL V1</div>
-                <div class="preview-box"><img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v1_preview.jpg" alt="V1"></div>
-                <table class="table-buttons"><tr>
-                    <td><a class="btn btn-blus" href="#">BLUS</a></td><td><a class="btn btn-bles" href="#">BLES</a></td>
-                </tr></table>
+            <td class="card">
+                <div class="card-title">🌍 MUNDIAL V1</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v1_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v1_preview.jpg" alt="Mundial V1">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/fqdt4a6f0wd2ubr/Mundial_2026_v1_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/xczuxkwohz7w2e3/Mundial_2026_v1_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
             </td>
-            <td class="card-cell">
-                <div class="card-title">MUNDIAL V2</div>
-                <div class="preview-box"><img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v2_preview.jpg" alt="V2"></div>
-                <table class="table-buttons"><tr>
-                    <td><a class="btn btn-blus" href="#">BLUS</a></td><td><a class="btn btn-bles" href="#">BLES</a></td>
-                </tr></table>
+
+            <td class="card">
+                <div class="card-title">🌍 MUNDIAL V2</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v2_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v2_preview.jpg" alt="Mundial V2">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/t58ycqo123o2kz9/Mundial_2026_v2_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/z429s67d65rz08l/Mundial_2026_v2_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
             </td>
         </tr>
-        <!-- Añade el resto siguiendo esta misma estructura de enlace raw.githubusercontent -->
+
+        <!-- FILA 2: V3 + V4 -->
+        <tr>
+            <td class="card">
+                <div class="card-title">🌍 MUNDIAL V3</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v3_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v3_preview.jpg" alt="Mundial V3">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/ik4smbig4k6dlpe/Mundial_2026_v3_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/mzag0zt4rei8bgb/Mundial_2026_v3_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
+            </td>
+
+            <td class="card">
+                <div class="card-title">🌍 MUNDIAL V4</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v4_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v4_preview.jpg" alt="Mundial V4">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/yod2pf6mjj3r8aw/Mundial_2026_v4_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/dt8dpmqhkka4c9a/Mundial_2026_v4_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- FILA 3: V5 + FRANCIA -->
+        <tr>
+            <td class="card">
+                <div class="card-title">🌍 MUNDIAL V5</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v5_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v5_preview.jpg" alt="Mundial V5">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/hzby1ik2za3vnje/Mundial_2026_v5_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/7hr7r886qaetl60/Mundial_2026_v5_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
+            </td>
+
+            <td class="card">
+                <div class="card-title">🇫🇷 FRANCIA</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/francia_portada_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/francia_portada_preview.jpg" alt="Francia">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/qcljpg8yganisky/francia_portada_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/b2a06ls1ysiayaw/francia_portada_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- FILA 4: VINICIUS + YAMAL -->
+        <tr>
+            <td class="card">
+                <div class="card-title">⚡ VINICIUS JR</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/vini_portada_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/vini_portada_preview.jpg" alt="Vinicius">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/8yvtmms43rhbwqy/vini_portada_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/fs01d4sy33lq24i/vini_portada_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
+            </td>
+
+            <td class="card">
+                <div class="card-title">🌟 LAMINE YAMAL</div>
+                <div class="preview">
+                    <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/yamal_portada_preview.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/yamal_portada_preview.jpg" alt="Yamal">
+                    </a>
+                </div>
+                <table class="btn-table">
+                    <tr>
+                        <td style="width:50%"><a class="btn btn-blus" href="https://www.mediafire.com/file/7j18aalrzibs3vd/yamal_portada_BLUS.pkg/file">BLUS</a></td>
+                        <td style="width:50%"><a class="btn btn-bles" href="https://www.mediafire.com/file/2lsuezbl9kd6oe8/yamal_portada_BLES.pkg/file">BLES</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
     </table>
+
+    <div class="footer">
+        PORTADAS PERSONALIZADAS PARA PES · PS3 · INSTALACIÓN VÍA PKG<br>
+        <span style="color:#555;">Todas las imágenes alojadas en GitHub · Enlaces a MediaFire</span>
+    </div>
 
 </body>
 </html>
