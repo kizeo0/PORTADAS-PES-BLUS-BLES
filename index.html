@@ -7,11 +7,10 @@
         /* === ESTILOS COMPATIBLES CON PS3 === */
         body {
             background-color: #0a0e14;
-            /* Fondo de imagen desde GitHub (raw) */
             background-image: url('https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/fokurou.png');
             background-position: center top;
-            background-repeat: repeat; /* o 'no-repeat' según prefieras */
-            background-attachment: fixed; /* se mantiene fijo al hacer scroll (si PS3 lo soporta) */
+            background-repeat: repeat;
+            background-attachment: fixed;
             color: #e6edf3;
             font-family: Arial, Helvetica, sans-serif;
             margin: 10px 5px;
@@ -19,12 +18,12 @@
             text-align: center;
         }
 
-        /* CABECERA con fondo semitransparente para legibilidad */
+        /* CABECERA */
         .header {
             max-width: 1100px;
             margin: 0 auto 20px auto;
             padding: 20px 15px 15px 15px;
-            background-color: rgba(22, 27, 34, 0.92); /* semitransparente */
+            background-color: rgba(22, 27, 34, 0.92);
             border: 2px solid #30363d;
             border-radius: 16px;
         }
@@ -51,7 +50,7 @@
             border-color: #ffffff;
         }
 
-        /* TABLA DE IDs (BLUS / BLES) */
+        /* TABLA DE IDs */
         .id-table {
             width: 100%;
             max-width: 900px;
@@ -95,19 +94,19 @@
         }
         .alert strong { color: #ffb347; }
 
-        /* === GRILLA PRINCIPAL (2 COLUMNAS CON TABLAS) === */
+        /* === GRILLA PRINCIPAL === */
         .grid {
             width: 98%;
             max-width: 1200px;
             margin: 0 auto;
             border-collapse: separate;
-            border-spacing: 18px; /* separación entre tarjetas */
+            border-spacing: 18px;
         }
 
         .card {
             width: 50%;
             vertical-align: top;
-            background-color: rgba(22, 27, 34, 0.93); /* semitransparente para ver fondo */
+            background-color: rgba(22, 27, 34, 0.93);
             border: 2px solid #30363d;
             border-radius: 18px;
             padding: 20px 15px;
@@ -130,15 +129,17 @@
             border: 2px solid #21262d;
             margin-bottom: 18px;
         }
+
+        /* === IMAGEN REDUCIDA A LA MITAD === */
         .preview img {
-            width: 100%;
+            max-width: 60%;          /* Antes ocupaba el 100%, ahora el 60% */
             height: auto;
             border-radius: 8px;
             display: block;
             margin: 0 auto;
         }
 
-        /* BOTONES EN FILA */
+        /* BOTONES */
         .btn-table {
             width: 100%;
             border-collapse: separate;
@@ -169,7 +170,7 @@
             text-decoration: underline;
         }
 
-        /* PIE DE PÁGINA */
+        /* PIE */
         .footer {
             margin: 35px auto 15px auto;
             max-width: 900px;
@@ -183,7 +184,7 @@
 </head>
 <body>
 
-    <!-- ===== CABECERA ===== -->
+    <!-- CABECERA -->
     <div class="header">
         <h1>⚽ PORTADAS PKG · PS3</h1>
         <div class="author">
@@ -204,17 +205,17 @@
         </table>
 
         <div class="alert">
-             <strong>Importante:</strong> Para aplicar el nuevo nombre, debes realizar una <strong>reconstrucción de base de datos</strong>.
+            <strong>Importante:</strong> Para aplicar el nuevo nombre, debes realizar una <strong>reconstrucción de base de datos</strong>.
         </div>
     </div>
 
-    <!-- ===== GRILLA DE PORTADAS ===== -->
+    <!-- GRILLA DE PORTADAS -->
     <table class="grid">
 
         <!-- FILA 1: V1 + V2 -->
         <tr>
             <td class="card">
-                <div class="card-title"> MUNDIAL V1</div>
+                <div class="card-title">🌍 MUNDIAL V1</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v1_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v1_preview.png" alt="Mundial V1">
@@ -229,7 +230,7 @@
             </td>
 
             <td class="card">
-                <div class="card-title"> MUNDIAL V2</div>
+                <div class="card-title">🌍 MUNDIAL V2</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v2_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v2_preview.png" alt="Mundial V2">
@@ -247,7 +248,7 @@
         <!-- FILA 2: V3 + V4 -->
         <tr>
             <td class="card">
-                <div class="card-title"> MUNDIAL V3</div>
+                <div class="card-title">🌍 MUNDIAL V3</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v3_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v3_preview.png" alt="Mundial V3">
@@ -262,7 +263,7 @@
             </td>
 
             <td class="card">
-                <div class="card-title"> MUNDIAL V4</div>
+                <div class="card-title">🌍 MUNDIAL V4</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v4_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v4_preview.png" alt="Mundial V4">
@@ -280,7 +281,7 @@
         <!-- FILA 3: V5 + FRANCIA -->
         <tr>
             <td class="card">
-                <div class="card-title"> MUNDIAL V5</div>
+                <div class="card-title">🌍 MUNDIAL V5</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v5_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/Mundial_2026_v5_preview.png" alt="Mundial V5">
@@ -295,7 +296,7 @@
             </td>
 
             <td class="card">
-                <div class="card-title"> FRANCIA</div>
+                <div class="card-title">🇫🇷 FRANCIA</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/francia_portada_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/francia_portada_preview.png" alt="Francia">
@@ -313,7 +314,7 @@
         <!-- FILA 4: VINICIUS + YAMAL -->
         <tr>
             <td class="card">
-                <div class="card-title"> VINICIUS JR</div>
+                <div class="card-title">⚡ VINICIUS JR</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/vini_portada_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/vini_portada_preview.png" alt="Vinicius">
@@ -328,7 +329,7 @@
             </td>
 
             <td class="card">
-                <div class="card-title"> LAMINE YAMAL</div>
+                <div class="card-title">🌟 LAMINE YAMAL</div>
                 <div class="preview">
                     <a href="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/yamal_portada_preview.png" target="_blank">
                         <img src="https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/portadas/yamal_portada_preview.png" alt="Yamal">
