@@ -7,6 +7,11 @@
         /* === ESTILOS COMPATIBLES CON PS3 === */
         body {
             background-color: #0a0e14;
+            /* Fondo de imagen desde GitHub (raw) */
+            background-image: url('https://raw.githubusercontent.com/kizeo0/PORTADAS-PES-BLUS-BLES/main/fokurou.png');
+            background-position: center top;
+            background-repeat: repeat; /* o 'no-repeat' según prefieras */
+            background-attachment: fixed; /* se mantiene fijo al hacer scroll (si PS3 lo soporta) */
             color: #e6edf3;
             font-family: Arial, Helvetica, sans-serif;
             margin: 10px 5px;
@@ -14,12 +19,12 @@
             text-align: center;
         }
 
-        /* CABECERA */
+        /* CABECERA con fondo semitransparente para legibilidad */
         .header {
             max-width: 1100px;
             margin: 0 auto 20px auto;
             padding: 20px 15px 15px 15px;
-            background-color: #161b22;
+            background-color: rgba(22, 27, 34, 0.92); /* semitransparente */
             border: 2px solid #30363d;
             border-radius: 16px;
         }
@@ -60,8 +65,8 @@
             border-radius: 12px;
             text-align: center;
         }
-        .id-blus { background-color: #0f2347; border: 3px solid #388bfd; }
-        .id-bles { background-color: #12331b; border: 3px solid #2ea043; }
+        .id-blus { background-color: rgba(15, 35, 71, 0.95); border: 3px solid #388bfd; }
+        .id-bles { background-color: rgba(18, 51, 27, 0.95); border: 3px solid #2ea043; }
         .id-label {
             display: block;
             font-size: 18px;
@@ -79,7 +84,7 @@
 
         /* AVISO */
         .alert {
-            background-color: #271d0c;
+            background-color: rgba(39, 29, 12, 0.95);
             border: 2px solid #d29922;
             color: #f0883e;
             padding: 12px 18px;
@@ -102,7 +107,7 @@
         .card {
             width: 50%;
             vertical-align: top;
-            background-color: #161b22;
+            background-color: rgba(22, 27, 34, 0.93); /* semitransparente para ver fondo */
             border: 2px solid #30363d;
             border-radius: 18px;
             padding: 20px 15px;
@@ -119,7 +124,7 @@
         }
 
         .preview {
-            background-color: #090c10;
+            background-color: rgba(9, 12, 16, 0.9);
             padding: 6px;
             border-radius: 10px;
             border: 2px solid #21262d;
@@ -172,7 +177,7 @@
             font-size: 15px;
             color: #8b949e;
             border-top: 1px solid #30363d;
-            background-color: #0d1117;
+            background-color: rgba(13, 17, 23, 0.92);
         }
     </style>
 </head>
@@ -341,7 +346,7 @@
 
     <div class="footer">
         PORTADAS PERSONALIZADAS PARA PES · PS3 · INSTALACIÓN VÍA PKG<br>
-        <span style="color:#555;">Todas las imágenes alojadas en GitHub · Enlaces a MediaFire</span>
+        <span style="color:#555;">Imagen de fondo: fokurou.png · Portadas alojadas en GitHub</span>
     </div>
 
 </body>
